@@ -1,0 +1,400 @@
+/* Add Fonts */
+@font-face{
+    font-family: "Arial Round";
+    src: url(fonts/Arial_Rounded_MT.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Arial Round Bold";
+    src: url(fonts/Arial_Rounded_MT_Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Century Gothic";
+    src: url(fonts/CenturyGothic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Defaults */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img.stretch{width: 100%;}
+img.sn-icon{
+    width: 67px !important;
+    height: 29px !important;
+    position: relative;
+}
+
+input[type="text"],
+input[type="submit"]{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+article{
+    display: block;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.button,
+input[type="submit"]{
+    display: inline-block;
+    border-radius: 3px !important;
+    border: 0;
+    box-shadow: none;
+    color: #fff;
+    background-color: #f99324;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center !important;
+    width: 130px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.button.login{
+    display: inline-block;
+    position: relative;
+    background: none;
+    border: 1px solid #fff;
+    font-family: "Arial Round", sans-serif;
+    font-weight: normal;
+    width: 105px;
+    height: 38px;
+    line-height: 38px;
+    margin-top: 25px;
+}
+
+.justify{
+    display: inline-block;
+    text-align: justify;
+    width: 100%;
+}
+
+.justify:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+}
+
+.secret{display: none;}
+
+.paddingBottom{padding-bottom: 30px !important;}
+.paddingTop20{padding-top: 20px !important;}
+.paddingSides{
+    padding-left: 17px;
+    padding-right: 17px;
+}
+.paddingRight{padding-right: 10px;}
+
+
+/* Style Fonts */
+h1{
+    font-family: "Arial Round Bold", "Arial Round", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: .4px;
+    line-height: 1.15em;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-family: "Arial Round Bold", "Arial Round", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #219fda;
+    letter-spacing: .4px;
+    line-height: 1.25em;
+}
+
+h3{
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 100;
+    font-size: 23px;
+    color: #303030;
+    letter-spacing: .4px;
+    line-height: 1.25em;
+}
+
+h4,
+#faq input[type="checkbox"] + label{
+    font-family: "Arial Round Bold", "Arial Round", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #219fda;
+    letter-spacing: .4px;
+    line-height: 1.45em;
+}
+
+h5{
+    font-family: "Arial Round Bold", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: #219fda;
+    letter-spacing: .4px;
+    line-height: 1.45em;
+}
+
+p, footer ul{
+    font-family: "Century Gothic", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #303030;
+    letter-spacing: .4px;
+    line-height: 1.45em;
+    margin-top: 10px;
+}
+
+p.big{
+    font-size: 16px;
+    letter-spacing: .2px;
+}
+
+p.testimonial{font-size: 18px;}
+
+p.credit{
+    font-weight: 100;
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    overflow: hidden;
+}
+
+/* Colors */
+.whiteTXT{color: #fff !important;}
+.blueTXT{color: #219fda !important;}
+
+.grey{background: #e8e8e8;}
+.blue{background: #219fda;}
+.orange{background: #f99324;}
+.lightgrey{background: #f9f9f9;}
+.darkgrey{background: #e2e2e2;}
+
+/* Text Styling */
+.caps{text-transform: uppercase;}
+
+/* Forms */
+form{margin-top: 40px;}
+
+.formlabel{
+    position: relative;
+    padding: 10px;
+}
+
+input[type="text"],
+textarea{
+    display: inline-block;
+    border: 0;
+    border-bottom: 1px solid #323232;
+    height: 40px;
+    width: 100%;
+    background: none;
+}
+
+input[type="text"] + label,
+textarea + label{
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    pointer-events: none;
+}
+
+input[type="text"]:focus + label,
+textarea:focus + label,
+input[type="text"].hasValue + label,
+textarea.hasValue + label{
+    font-size: 12px;
+    top: 7px;
+}
+
+input[type="text"],
+input[type="text"] + label,
+textarea,
+textarea + label{
+    font-family: "Century Gothic", sans-serif;
+    font-size: 18px;
+}
+
+input[type="submit"]{margin-top: 20px;}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active{outline: 0;}
+
+textarea{
+    resize: none;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    padding-top: 9px;
+}
+
+textarea:focus,
+textarea.hasValue{
+    height: 300px;
+}
+
+#contactform input[type="checkbox"]{ display: none;}
+
+#contactform input[type="checkbox"] + label{
+    font-family: "Arial Round Bold", "Arial Round", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #219fda;
+    line-height: 22px;
+    vertical-align: middle;
+}
+
+#contactform input[type="checkbox"] + label:before{
+    content: url(../img/contact/inactive.png);
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    top: 7px;
+}
+
+#contactform input[type="checkbox"]:checked + label:before{
+    content: url(../img/contact/active.png);
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    top: 7px;
+}
+
+/* Layouts */
+/*********** HEADER ***********/
+header{
+    background: url(../img/header/Headerimage.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 608px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding: 25px 0 50px;
+}
+
+header img{
+    margin-top: 130px;
+    width: 188px;
+    height: 62px;
+}
+
+/********** PROVIDERS **********/
+#providers .grey{padding: 20px 0;}
+
+#providers .row,
+#providers .col{
+    height: 53px;
+    margin: 0 auto;
+}
+
+/********** ABOUT **********/
+#about .row .row a{
+    margin-right: 42px;
+}
+
+#about a img{
+    display: inline-block;
+}
+
+#about a{
+    display: inline-block;
+}
+
+/********** MORE INFO **********/
+#moreinfo{
+    background: url(../img/contact/moreinfoimg.png) no-repeat center center;
+    background-size: cover;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/********** OUR SERVICES **********/
+#services{padding-bottom: 50px;}
+
+#services img{
+    margin: 30px auto 20px;
+}
+
+/********** OUR TEAM **********/
+#team{margin-top: -5px;}
+
+#team img{
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+/********** CONTACT **********/
+#contact h3{margin: auto auto 20px auto;}
+
+/********** FAQ **********/
+#faq input[type="checkbox"]{display: none;}
+
+div.accordion{padding: 15px 0;}
+
+div.accordion input[type="checkbox"] + label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+div.accordion input[type="checkbox"] + label:after{
+    content: url(../img/faq/show.png);
+    display: inline-block;
+    float: right;
+}
+
+div.accordion input[type="checkbox"]:checked + label:after{
+    content: url(../img/faq/hide.png);
+    display: inline-block;
+    float: right;
+}
+
+div.accordion input[type="checkbox"] + label + p{display: none;}
+div.accordion input[type="checkbox"]:checked + label + p{display: block;}
+
+
+#faq hr{
+    height: 1px;
+    color: #ccc;
+    background: #ccc;
+    border: none;
+}
+
+/********** FOOTER **********/
+footer .lightgrey{
+    padding: 30px 0;
+}
+
+footer ul{
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: text-top;
+}
+
+footer .darkgrey p{
+    font-size: 12px;
+}

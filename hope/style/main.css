@@ -1,0 +1,787 @@
+@font-face{
+    font-family: "Arial Round";
+    src: url(Arial_Rounded_MT.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Arial Round Bold";
+    src: url(Arial_Rounded_MT_Bold.ttf) format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Century Gothic";
+    src: url(CenturyGothic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: "Arial Round", "Century Gothic", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+article{
+    padding: 50px 0;
+    position: relative;
+}
+
+.paddedTop{padding-top: 50px !important;}
+.paddedTop25{padding-top: 25px !important;}
+.paddedBottom{padding-bottom: 30px !important;}
+.paddedBottom50{padding-bottom: 50px !important;}
+.paddedRight10{padding-right: 10px !important;}
+.smallimgpadding .three{padding: 10px !important;}
+.marginBottom50{margin-bottom: 50px !important;}
+
+.sideimg img{
+    width: 100%;
+    height: auto;
+}
+
+ul.iconlist{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.iconlist > li{
+    display: block;
+    position: relative;
+    padding: 25px 0;
+    margin-left: 100px;
+    min-height: 100px !important;
+}
+
+ul.iconlist > li:first-child{padding-top: 0;}
+ul.iconlist > li:last-child{padding-bottom: 10px;}
+
+ul.iconlist > li img{
+    position: absolute;
+    margin-top: 10px;
+    left: -100px;
+    width: 81px;
+    height: 83px;
+}
+
+ul.iconlist > li h2{
+    margin-top: 10px;
+}
+
+ul.iconlist > li .button.green{
+    float: right;
+} 
+
+ul.iconlist ul{
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 15px;
+}
+
+ul.iconlist ul li{
+    margin: 20px 0;
+    color: #919191;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 14px;
+}
+
+ul.iconlist ul li span{
+    color: #000;
+}
+
+ul.iconlist ul strong{
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+}
+
+ul.iconlist-wide{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.iconlist-wide > li{
+    display: block;
+    position: relative;
+    padding: 50px 0;
+    margin-left: 250px;
+    min-height: 253px;
+}
+
+ul.iconlist-wide > li.divider{
+    margin-left: 0;
+    padding: 0;
+    max-height: 19px !important;
+    min-height: 0;
+}
+
+ul.iconlist-wide > li img{
+    position: absolute;
+    left: -250px;
+}
+
+ul.iconlist-wide > li img.teamsn{
+    position: relative;
+    left: 0;
+    float: right;
+    height: 29px;
+    width: 67px;
+}
+
+article#teammenu{
+    padding-bottom: 0;
+}
+
+ul.teamnav{
+    display: block;
+    position: relative;
+    list-style-type: none;
+    border-bottom: 1px solid #b5b5b5;
+    z-index: 100;
+}
+
+ul.teamnav li{
+    display: inline-block;
+    position: relative;
+    line-height: 1.45em;
+    font-family: "Arial Round Bold", "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #219ed8;
+    letter-spacing: .6px;
+    bottom: -1px;
+    text-align: center;
+    padding: 10px 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-bottom-color: #b5b5b5;
+    z-index: 99;
+}
+
+ul.teamnav li.active,
+ul.teamnav li:hover{
+    border: 1px solid #b5b5b5;
+    border-bottom-color: #fff;
+    z-index: 101;
+}
+
+#therapists,
+#leadership,
+#affiliates{
+    padding-top: 0;
+}
+
+#therapists,
+#leadership,
+#affiliates{
+    display: none;
+}
+
+#therapists.active,
+#leadership.active,
+#affiliates.active{
+    display: block;
+}
+
+ul.iconlist-wide li > ul{
+    margin-left: 15px;
+    list-style-type: disc;
+    color: #313131;
+}
+
+ul.iconlist-wide li > ul li{
+    color: #313131;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "Century Gothic", sans-serif;
+}
+
+.justify{
+    display: inline-block;
+    text-align: justify;
+    width: 100%;
+}
+
+.justify:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+}
+
+/*** IMAGES **********/
+img.location{
+    margin-bottom: 10px;
+}
+
+div.locationimg{
+    height: 46px;
+}
+
+/*** BACKGROUNDS **********/
+.blue{background: #2b9fda;}
+.green{background: #95c03d;}
+.orange{background: #f59c00;}
+.purple{background: #822880;}
+.pink{background: #e2107e;}
+.lightgrey{background: #f9f9f9;}
+.darkgrey{background: #e2e2e2;}
+
+/******************** FONTS ********************/
+
+.whiteTXT{color: #fff !important;}
+.blueTXT{color: #219ed8 !important;}
+.darkgreyTXT{color: #363636 !important;}
+.lightgreyTXT{color: #989898 !important;}
+
+.nocaps{text-transform: none !important;}
+.nomargin{margin: 0;}
+
+.strongem{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 13px;
+}
+
+a{text-decoration: none !important;}
+
+a.directions{
+    text-decoration: underline !important;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #219ed8;
+}
+
+nav a.current{
+    color: #219ed8;
+}
+
+.marginBottom{
+    margin-bottom: 1em;
+}
+
+.marginTop{
+    margin-top: 1em;
+}
+
+span.name{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+span.author{
+    font-style: italic;
+}
+
+p.homeTeam{
+    font-size: 12px;
+}
+
+p{
+    font-family: "Century Gothic", sans-serif;
+    font-size: 14px;
+    color: #313131;
+    letter-spacing: .4px;
+    line-height: 1.45em;
+    margin-top: 1em;
+}
+
+p.small{
+    font-family: "Arial Round", sans-serif;
+    font-size: 12px;
+    color: inherit;
+    letter-spacing: .4px;
+    line-height: 1.45em;
+    margin-top: 1em;
+    font-style: italic;
+}
+
+p.big{
+    font-size: 15px;
+}
+
+p.bigger{
+    font-size: 19px;
+    font-weight: 100;
+}
+
+p.tight{
+    letter-spacing: .3px;
+}
+
+p.smallMargin{
+    margin-top: .25em;
+    letter-spacing: .2px;
+}
+
+h1{
+    font-family: "Arial Round", "Century Gothic", sans-serif;
+    font-size: 40px;
+    letter-spacing: .8px;
+}
+
+h2{
+    font-family: "Arial Round Bold", "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1.45em;
+    letter-spacing: .8px;
+    color: #219ed8;
+}
+
+h2.position{
+    display: inline-block;
+}
+
+.sub{
+    font-family: "Century Gothic", sans-serif;
+    font-weight: normal;
+    color: #313131;
+    text-transform: none;
+}
+
+h3{
+    font-family: "Arial Round Bold", "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.45em;
+    letter-spacing: .8px;
+    color: #219ed8;
+    text-transform: uppercase;
+}
+
+h4{
+    font-family: "Arial Round Bold", "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.45em;
+    letter-spacing: .8px;
+    color: #219ed8;
+    text-transform: capitalize;
+}
+
+h5,
+.contactUs label{
+    font-family: "Arial Round", "Century Gothic", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.45em;
+    letter-spacing: .2px;
+    color: #219ed8;
+}
+
+
+p.button,
+input[type="submit"]{
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 5px !important;
+    width: 145px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+    letter-spacing: .7px;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"],
+input[type="text"]{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.button.orange,
+input[type="submit"]{
+    background: #f27f24;
+    margin-top: 1em;
+    width: 131px;
+    height: 40px;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: bold;
+    border: 0;
+}
+
+.button.green{
+    background: #95c03d;
+    display: inline-block;
+    margin-left: 30px;
+    border: 0;
+}
+
+.button.bold{
+    font-weight: bold;
+    padding: 0 20px;
+    width: auto;
+}
+
+.button.marginTop{
+    margin-top: 30px;
+}
+
+hr{
+    width: 100%;
+    height: 1px;
+    color: #dedede;
+    background: #dedede;
+    border: 0;
+}
+
+hr.slash{
+    height: 19px;
+    width: 100%;
+    background: url(../img/slash_divider.png) repeat-x center center;
+}
+
+/*** HEADER **********/
+header.homeHeader{
+    width: 100%;
+    height: auto;
+    background: #999;
+    background: url('../img/homeHeader.jpg') no-repeat top left;
+    background-size: cover;
+    color: #fff;
+}
+
+header.homeHeader .headertop{
+    height: 189px;
+	padding-top: 30px;
+}
+
+header.homeHeader .button.learnmore{
+    margin-top: 4vh;
+    
+}
+
+header.homeHeader .headerbottom{
+    min-height: 110px;
+    width: 100%;
+    background: #f5f7f9;
+}
+
+header.innerHeader{
+    height: 189px;
+    width: 100%;
+	position: relative;
+}
+
+header.innerHeader .row{
+	height: 100%;
+	padding-top: 30px;
+	display: block;
+	position: relative;
+}
+
+.headerright{
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
+
+.headerleft{
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+
+/*** NAVIGATION **********/
+nav ul{
+    list-style-type: none;
+    display: block;
+    padding: 20px 0 !important;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    font-family: "Arial Round Bold", "Century Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #989898;
+}
+
+header.innerHeader nav.mobile{
+    display: none;
+}
+
+nav.mobile ul{
+    display: none;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 999;
+}
+
+nav.mobile ul li{
+    display: inline-block;
+    background: #fff;
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+nav.mobile ul li a{
+    width: 100%;
+    height: 100%;
+}
+
+ul li.staffmenuitem,
+nav.mobile ul li.staffmenuitem{
+    display: none;
+}
+
+#mobilenav{
+    display: none;
+}
+
+#mobilenav:checked + .mobile ul{
+    display: block;
+}
+
+.headerleft > label{
+    cursor: pointer;
+}
+
+/*** FORM **********/
+.secret{
+    display: none;
+}
+
+footer form{
+    margin: 50px 0;
+    box-sizing: border-box;
+}
+
+footer input[type="text"]{
+    height: 40px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+    border: 0;
+    border-bottom: 1px solid #000;
+    display: inline-block;
+}
+
+footer input[type="submit"]{
+    margin-top: 30px;
+}
+
+footer input:focus,
+footer input:active{
+    outline: 0;
+}
+
+.footerName,
+.footerEmail{
+    width: 30%;
+}
+
+.footerPhone{
+    width: 24%;
+}
+
+.footerName,
+.footerPhone{
+    margin-right: 5%;
+}
+
+.footerName > input,
+.footerPhone > input,
+.footerEmail > input{
+    width: 100%;
+}
+
+.footerForm label{
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    pointer-events: none;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.footerForm input:focus + label,
+.footerForm input.hasValue + label{
+    top: 50px;
+    font-size: 12px;
+}
+
+.footerForm input[type="submit"]{
+    margin-top: 40px;
+}
+
+.footerForm{
+    display: inline-block;
+    position: relative;
+}
+
+footer form{
+    margin-bottom: 0;
+}
+
+footer ul{
+    display: inline-block;
+    list-style-type: none;
+    vertical-align: text-top;
+}
+
+footer ul li{
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-family: "Century Gothic", sans-serif;
+    line-height: 1.45em;
+    letter-spacing: .4px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-family: "Century Gothic", sans-serif;
+    line-height: 1.45em;
+    letter-spacing: .4px;
+}
+
+footer ul li h4{
+    padding-bottom: 10px;
+}
+
+/*** HOME PAGE **********/
+.homeServices .three{
+    padding: 0 10px;
+}
+
+/*** CAREERS PAGE **********/
+.jobdesc{
+    display: none;
+}
+
+.readmore{
+    cursor: pointer;
+}
+
+#tomh-details:checked + .jobdesc{
+    display: block;
+}
+
+/*** CONTACT PAGE **********/
+.contactUs div label{
+    display: block;
+    margin: 10px 0;
+}
+
+.contactUs div input[type="text"]{
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-family: "Arial Round", "Century Gothic", sans-serif;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px !important;
+}
+
+.contactUs div textarea{
+    box-sizing: border-box;
+    width: 100%;
+    height: 170px;
+    resize: vertical;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-family: "Arial Round", "Century Gothic", sans-serif;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px !important;
+}
+
+/*** FOOTER **********/
+footer .lightgrey{
+    padding: 50px 0;
+}
+
+footer .darkgrey{
+    padding: 10px 0;
+}
+
+footer .darkgrey p{
+    font-size: 12px;
+}
+
+/*** MAPS **********/
+#gmap{
+    width: 100%;
+    height: 40vw;
+    padding: 0;
+    margin: 0 0 -5px;
+    border: 0;
+}
+
+.locationimage{
+    display: block;
+    height: 100px;
+    width: 150px;
+}
+
+
+/*** MISC **********/
+.placeholder{
+    margin: 10px 0;
+}
+
+.placeholder img{
+    width: 100%;
+    height: auto;
+}
+
+.absright{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#bhs, #spd{
+    display: none;
+}
+
+div.errors{
+    background: #e2e2e2;
+    color: #363636;
+    padding: 30px 10px;
+    border-radius: 3px;
+}
+
+div.errors ul{
+    list-style-type: none;
+}
+
+div.errors ul li{
+    margin-bottom: 8px;
+}

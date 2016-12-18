@@ -1,0 +1,82 @@
+// Breakpoints
+=break-xxs
+  @media only screen and (min-width: 320px)
+    @content
+
+=break-xs
+  @media only screen and (min-width: 480px)
+    @content
+
+=break-sm
+  @media only screen and (min-width: 768px)
+    @content
+
+=break-md
+  @media only screen and (min-width: 992px)
+    @content
+
+=break-lg
+  @media only screen and (min-width: 1200px)
+    @content
+
+// Clearfix
+%clearfix
+  *zoom: 1
+  &::before,
+  &::after
+    content: ''
+    display: table
+  &::after
+    clear: both
+
+// Responsive
+%responsive
+  +break-xxs
+    width: 304px
+  +break-xs
+    width: 464px
+  +break-sm
+    width: 750px
+  +break-md
+    width: 970px
+  +break-lg
+    width: 1170px
+
+// Columns
+=column-sizes($screen-size)
+  @for $i from 1 through $columns
+    .col#{$screen-size}-#{$i}
+      width: 100% / $columns * $i
+
+// Push
+=column-push($screen-size)
+  @for $i from 1 through $columns
+    .push#{$screen-size}-#{$i}
+      left: 100% / $columns * $i
+
+// Pull
+=column-pull($screen-size)
+  @for $i from 1 through $columns
+    .pull#{$screen-size}-#{$i}
+      right: 100% / $columns * $i
+
+// Offset
+=column-offset($screen-size)
+  @for $i from 1 through $columns
+    .offset#{$screen-size}-#{$i}
+      margin-left: 100% / $columns * $i
+  .offset#{$screen-size}-0
+    margin-left: 0
+
+// Block Grid
+=block-grid($screen-size)
+  @for $i from 1 through $columns
+    .block-grid#{$screen-size}-#{$i} > li,
+    .block-grid#{$screen-size}-#{$i} > .block-item
+      width: 100% / $i
+      list-style: none
+      clear: none
+
+    .block-grid#{$screen-size}-#{$i} > li:nth-child(#{$i}n + 1),
+    .block-grid#{$screen-size}-#{$i} > .block-item:nth-child(#{$i}n + 1)
+      clear: both

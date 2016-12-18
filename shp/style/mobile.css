@@ -1,0 +1,254 @@
+@media (max-width: 940px){
+	.content{
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		width: 100% !important;
+	}
+	
+	.columns, .col3{
+		display: block;
+		float: none;
+		clear: both;
+		padding: 0;
+		margin: 0 auto;
+	}
+	
+	#shippingInfo, #returnsPolicy, #termsConditions{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+	
+	/* NAVIGATION */
+	nav#initial, nav#fixed_nav{
+		display: none;
+		visibility: hidden;
+	}
+	
+	nav#mobile_nav{
+		visibility: visible;
+		position: fixed;
+		display: block;
+	}
+	
+	nav#mobile_nav img{
+		position: fixed;
+		display: block;
+		clear: both;
+		float: left;
+		height: 30px;
+		width: 30px;
+		margin: 10px 0 0 10px;
+		cursor: pointer;
+	}
+	
+	nav#mobile_nav ul{
+		display: none;
+	}
+	
+	nav#mobile_nav ul li{
+		display: block;
+		font-size: 14px;
+		height: 8vh;
+		width: 100%;
+		line-height: 8vh;
+		vertical-align: middle;
+		background: #525252;
+		text-align: center;
+		margin: 0;
+		cursor: pointer;
+		padding: 0;
+	}
+	
+	/* HOME */
+	#home{
+		padding-top: 70px;
+	}
+	
+	#home #mobile_logo{
+		display: block;
+		margin: -80px auto 0;
+	}
+	
+	/* HOW WE WORK */
+	#how .col3,
+	#how .col3 p{
+		width: 60vw;
+		margin: 5vw auto;
+	}
+	
+	/* MISSION */
+	#mission .content{
+		width: 100%;
+		padding: 0;
+	}
+	
+	#mission .content .transparent{
+		width: 80vw;
+		padding: 5vw 0;
+		margin: 0 auto;
+	}
+	
+	#mission .transparent h3,
+	#mission .transparent p{
+		width: 70vw;
+	}
+	
+	/* ABOUT US */
+	#about .col2{
+		display: block;
+		padding: 0;
+		float: none;
+		width: 80vw;
+		margin: 0 auto;
+	}
+	
+	#about .founder_info:last-child{
+		margin-bottom: 30px;
+	}
+	
+	/* PRE-ORDER */
+	#preorder .col3:first-child,
+	#preorder .col3:first-child p,
+	#preorder .col3:first-child h3,
+	#preorder .col3:first-child h2{
+		width: 80vw;
+		text-align: center;
+	}
+	
+	#preorder .col3:nth-child(2),
+	#preorder .col3:last-child{
+		width: 40vw;
+		display: inline-block;
+		float: left;
+		clear: none;
+		padding-left: 4vw;
+		padding-right: 5vw;
+	}
+	
+	/* ANSWERS */
+	#answers,
+	#answers .content,
+	#answers .columns{
+		width: 100%;
+	}
+	
+	#answers .columns .col2,
+	#answers h6{
+		width: 80vw;
+		display: block;
+		padding: 0;
+		margin: 0 auto;
+		float: none;
+	}
+	
+	/* FOOTER */
+	footer{
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 10vw;
+	}
+	
+	footer ul{
+		display: none;
+	}
+	
+	/* LEGAL INFO */
+	#legal .content{
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: #525252;
+		overflow: auto;
+		width: 100%;
+		max-height: 100%;
+		box-sizing: border-box;
+		z-index: 9;
+	}
+	
+	#legal .content p,
+	#legal .content h4,
+	#legal .content h5{
+		width: 80vw;
+		margin: 5vw auto;
+	}
+	
+	#legal img.closeBox{
+		display: block;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		height: 30px;
+		width: 30px;
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 500px){
+	p{
+		font-size: 13px;
+		padding-left: 2vw;
+		padding-right: 2vw;
+	}
+	
+	p.founder_info{
+		font-size: 12px;
+	}
+	
+	h2{
+		font-size: 10vw;
+	}
+	
+	h3{
+		font-size: 7vw;
+	}
+	
+	#how .col3,
+	#how .col3 p{
+		width: 90vw;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	#preorder .columns .col3{
+		display: block;
+		float: none;
+		clear: both;
+		margin: 0 auto;
+		width: 90vw;
+	}
+	
+	#preorder .columns .col3 img{
+		margin: 0 auto;
+	}
+	
+	#signup h2{
+		font-size: 8vw;
+	}
+	
+	#signup input[name="semail"]{
+		width: 60vw;
+	}
+	
+	#signup input[name="submit"]{
+		display: block;
+		clear: both;
+		margin: 2vw auto;
+	}
+	
+	#mission .content .transparent{
+		width: 90vw;
+	}
+}
+
+@media (max-width: 425px){
+	p{
+		font-size: 3.8vw;
+	}
+	
+	#home p br{
+		display: none;
+	}
+}
+

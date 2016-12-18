@@ -1,0 +1,14 @@
+@media screen and (max-width: 860px){
+    #about .row .row a{
+        margin-right: 10px;
+    }
+    
+    #about .row .row a:last-child{
+        margin-right: 0;
+    }
+    
+    footer .lightgrey ul{
+        text-align: left;
+        width: 200px;
+    }
+}

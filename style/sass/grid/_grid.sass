@@ -1,0 +1,170 @@
+@import 'variables'
+@import 'mixins'
+
+// Resets
+.container,
+.container::before,
+.container::after,
+.row,
+.row::before,
+.row::after,
+.row-padded,
+.row-padded::before,
+.row-padded::after,
+[class*='col-'],
+[class*='col-']::before,
+[class*='col-']::after,
+[class*='block-grid-'],
+[class*='block-grid-']::before,
+[class*='block-grid-']::after,
+[class*='block-grid-'] > li,
+[class*='block-grid-'] > li::before,
+[class*='block-grid-'] > li::after,
+[class*='block-grid-'] > .block-item,
+[class*='block-grid-'] > .block-item::before,
+[class*='block-grid-'] > .block-item::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+// Image Fixes
+img:not(.oversized)
+  width: auto
+  max-width: 100%
+  height: auto
+
+// Container & Row
+.container
+  width: 100%
+  padding: 0 $gutter
+  margin: 0 auto
+
+.responsive.container,
+.responsive .container
+  @extend %responsive
+
+.row,
+.row-padded,
+[class*='block-grid-']
+  margin-right: -$gutter
+  margin-left: -$gutter
+
+// Clearfix
+.container,
+.row,
+.row-padded,
+[class*='block-grid-']
+  @extend %clearfix
+
+// Column defaults
+[class*='col-'],
+[class*='block-grid-'] > li,
+[class*='block-grid-'] > .block-item
+  position: relative
+  float: left
+  padding: 0 $gutter
+  width: 100%
+  min-height: 1px
+  .row-padded &
+    padding: $gutter
+
+[class*='block-grid-'] > li,
+[class*='block-grid-'] > .block-item
+  padding: 0 $gutter $gutter
+
+// Standard columns - For all screen sizes (no media queries)
++column-sizes('')
++column-push('')
++column-pull('')
++column-offset('')
++block-grid('')
+
+// XS columns - For screens 480px+
++break-xs
+  +column-sizes('-xs')
+  +column-push('-xs')
+  +column-pull('-xs')
+  +column-offset('-xs')
+  +block-grid('-xs')
+
+// SM columns - For screens 768px+
++break-sm
+  +column-sizes('-sm')
+  +column-push('-sm')
+  +column-pull('-sm')
+  +column-offset('-sm')
+  +block-grid('-sm')
+
+// MD columns - For screens 992px+
++break-md
+  +column-sizes('-md')
+  +column-push('-md')
+  +column-pull('-md')
+  +column-offset('-md')
+  +block-grid('-md')
+
+// LG columns - For screens 1200px+
++break-lg
+  +column-sizes('-lg')
+  +column-push('-lg')
+  +column-pull('-lg')
+  +column-offset('-lg')
+  +block-grid('-lg')
+
+
+// Flexbox Classes
+.flex-row
+  display: flex
+  flex-direction: row
+
+.flex-col
+  display: flex
+  flex-direction: column
+
+.flex-responsive
+  display: flex
+  flex-direction: column
+  +break-md
+    flex-direction: row
+
+.flex-row-reverse
+  display: flex
+  flex-direction: row-reverse
+
+.flex-col-reverse
+  display: flex
+  flex-direction: column-reverse
+
+.flex-responsive-reverse
+  display: flex
+  flex-direction: column-reverse
+  +break-md
+    flex-direction: row-reverse
+
+.flex-sa
+  justify-content: space-around
+  align-items: center
+
+.flex-sb
+  justify-content: space-between
+  align-items: center
+
+.flex-baseline
+  display: flex
+  flex-direction: row
+  align-items: baseline
+  justify-content: space-between
+  flex-wrap: wrap
+
+// Text Alignment
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+.text-center
+  text-align: center
+
+.text-justify
+  text-align: justify
