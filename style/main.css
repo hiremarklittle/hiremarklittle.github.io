@@ -1844,11 +1844,11 @@ main {
   background: darkgray;
 }
 
-.red {
-  background: red;
-  height: 20px;
+p + p {
+  margin-top: 1em;
 }
 
-p + p {
-  margin-top: 10px;
+img {
+  display: inline-block;
+  margin: 0 auto;
 }
