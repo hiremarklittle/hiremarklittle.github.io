@@ -16,13 +16,7 @@
 [class*='col-']::after,
 [class*='block-grid-'],
 [class*='block-grid-']::before,
-[class*='block-grid-']::after,
-[class*='block-grid-'] > li,
-[class*='block-grid-'] > li::before,
-[class*='block-grid-'] > li::after,
-[class*='block-grid-'] > .block-item,
-[class*='block-grid-'] > .block-item::before,
-[class*='block-grid-'] > .block-item::after
+[class*='block-grid-']::after
   margin: 0
   padding: 0
   box-sizing: border-box
@@ -44,22 +38,18 @@ img:not(.oversized)
   @extend %responsive
 
 .row,
-.row-padded,
-[class*='block-grid-']
+.row-padded
   margin-right: -$gutter
   margin-left: -$gutter
 
 // Clearfix
 .container,
 .row,
-.row-padded,
-[class*='block-grid-']
+.row-padded
   @extend %clearfix
 
 // Column defaults
-[class*='col-'],
-[class*='block-grid-'] > li,
-[class*='block-grid-'] > .block-item
+[class*='col-']
   position: relative
   float: left
   padding: 0 $gutter
@@ -68,9 +58,27 @@ img:not(.oversized)
   .row-padded &
     padding: $gutter
 
+// Block Grid
+[class*='block-grid-']
+  display: block
+  padding: 0
+  margin: 0 (-$gutter)
+  .row &,
+  .row-padded &
+    margin: 0
+
+ul[class*='block-grid-']
+  list-style-type: none
+
 [class*='block-grid-'] > li,
 [class*='block-grid-'] > .block-item
-  padding: 0 $gutter $gutter
+  display: block
+  position: relative
+  box-sizing: border-box
+  min-height: 1px
+  height: auto
+  float: left
+  padding: 0 $gutter ($gutter * 2)
 
 // Standard columns - For all screen sizes (no media queries)
 +column-sizes('')
